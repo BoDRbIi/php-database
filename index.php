@@ -1,9 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-    <!--
-        Design: Gostkov Evgeniy
-        date: 6.04.2012
-     -->
+
     <head>
         <title>Main page | Database-project</title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -11,15 +8,17 @@
     </head>
 
     <body>
-        <!-- div header - include  -->
+
         <div id="main-header">
             <a href="index.php">
                 <img src="images/header.png">
             </a>
         </div>
+
         <hr />
+
         <div id="main-content">
-            <!-- menu of site -->
+
             <div class="menu">
                 <ul>
                     <li><a href="index.php">Main page</a></li>
@@ -31,17 +30,21 @@
                 </ul>
             </div>
 
-            <!-- other content -->
             <div id="content">
                 Database. Third task. web-site with support forum, gallery, social network
             </div>
-        </div><!-- end main content-->
 
-        <!--footer include copyright information and etc... -->
-        <div id="main-footer">
-            <a href="author.html">&copy; Authors page</a>
+            <div id="left-menu">
+                <form action="auth.php" method="get">
+                    Login: <input type="text" name="login" required="1" /><br />
+                    Pass: <input type="password" name="password" required="1" /> <br />
+                    <input type="submit" value="Auth"/> or <a href="registration.php">register</a>
+                </form>
+            </div>
+
+
         </div>
-        <!-- end div copyrigth-->
+
     </body>
 </html>
 <?php

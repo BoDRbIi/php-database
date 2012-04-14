@@ -1,9 +1,8 @@
+<?php
+    include_once '../config.php';
+?>
 <!DOCTYPE HTML>
 <html>
-<!--
-   Design: Gostkov Evgeniy
-   date: 6.04.2012
--->
 <head>
     <title>Main page | Database-project</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -29,9 +28,32 @@
 
     <!-- other content -->
     <div id="content">
-        Database. Third task. web-site with support forum, gallery, social network
-    </div>
+       <?php
+            $sql = mysql_query('SELECT * FROM users');
+            if(!$sql)
+                exit('Error');
+            else
+            {
+                echo "<table border=\"1\" style=\"text-align:center\">";
+                $xid=1;
+                while(list($id, $login, $name, $surname, $pass ,$mail, $idgroup) = mysql_fetch_row($sql))
+                {
+                    echo "<tr>
+    				    <td>$id</td>
+	    				<td>$login</td>
+		    			<td>$name</td>
+			    		<td>$surname</td>
+			    		<td>$mail</td>
+			    		<td>$idgroup</td>
+				    	</tr>";
+                    $xid++;
+                }
+                echo "</table>";
+            }
+        ?>
 
+    </div>
+    <!--
     <div id="left-menu">
         <form action="auth.php" method="get">
             Login: <input type="text" name="login" required="1" /><br />
@@ -39,7 +61,7 @@
             <input type="submit" value="Auth"/> or <a href="registration.php">register</a>
         </form>
     </div>
-
+    -->
 </div>
 </body>
 </html>

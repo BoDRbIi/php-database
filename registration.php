@@ -1,11 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-<!--
-   Design: Gostkov Evgeniy
-   date: 6.04.2012
--->
 <head>
-    <title>Authors page | Database-project</title>
+    <title>Registration | Database-project</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="./css/base.css" type="text/css">
 </head>
@@ -17,7 +13,9 @@
         <img src="images/header.png">
     </a>
 </div>
+
 <hr />
+
 <div id="main-content">
     <!-- menu of site -->
     <div class="menu">
@@ -33,15 +31,35 @@
 
     <!-- other content -->
     <div id="content">
-        <em>Core, design:</em><br />
-        <ul>
-            <li>Евгений Гостьков</li>
-            <li>Дмитрий Вылегжанин</li>
-            <li>Ильдар Зайнуллин</li>
-            <li>Иван Герасимов</li>
-        </ul>
-        
+
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" required="1" /></td>
+                </tr>
+                <tr>
+                    <td>Surname:</td>
+                    <td><input type="text" name="surname" required="1" /></td>
+                </tr>
+                <tr>
+                    <td>Login:</td>
+                    <td><input type="text" name="login" required="1" /></td>
+                </tr>
+                <tr>
+                    <td>e-mail:</td>
+                    <td><input type="email" name="e-mail" required="1" /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" required="1" /></td>
+                </tr>
+            </table>
+            <input type="submit" value="Registration" />
+        </form>
+
     </div>
+
     <div id="left-menu">
         <form action="auth.php" method="get">
             Login: <input type="text" name="login" required="1" /><br />
@@ -49,6 +67,8 @@
             <input type="submit" value="Auth"/> or <a href="registration.php">register</a>
         </form>
     </div>
+
 </div>
+
 </body>
 </html>
