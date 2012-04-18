@@ -22,7 +22,7 @@
     <div class="menu">
         <ul>
             <li><a href="../index.php">Main page</a></li>
-            <li><a href="users.php">List of users</a></li>
+            <li><a href="users2.php">List of users</a></li>
         </ul>
     </div>
 
