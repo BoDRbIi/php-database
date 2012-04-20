@@ -19,10 +19,11 @@ class Database
     protected $dbUser = 'root';
     protected $dbPassword = 'p@ssw0rd';
     protected $dbName = 'task-3-db';
+    protected $connection;
 
     protected  function __construct()
     {
-        mysql_connect($this->dbHost, $this->dbUser, $this->dbPassword) or die ('Error connecting to mysql');
+        $this->connection = mysql_connect($this->dbHost, $this->dbUser, $this->dbPassword) or die ('Error connecting to mysql');
         mysql_select_db($this->dbName) or die ('Can\'t select db');
     }
 
@@ -118,6 +119,10 @@ class Group extends Database
 
     }
 
+    public function __destruct()
+    {
+        mysql_close($this->connection);
+    }
 }
 
 //$obj = new Group();
