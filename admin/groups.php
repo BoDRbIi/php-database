@@ -33,9 +33,10 @@
 
                 $obj = new Group();
                 $table = $obj->getAllGroups();
-                echo "<pre>";
-                print_r($list2);
-                echo "</pre>";
+                echo "<table border='1'>";
+                foreach($table as $key => $value)
+                    echo $table[$key];
+                echo "</table>";
             ?>
 
         </div>

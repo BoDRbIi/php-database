@@ -93,7 +93,6 @@ class Group extends Database
         if ($query)
         {
             $arrayAll = mysql_fetch_array($query);
-            //print_r($arrayAll);
             return $arrayAll;
         }
 
@@ -113,7 +112,12 @@ class Group extends Database
             while ($row = mysql_fetch_array($query))
             {
                 $i = $row['id'];
-                $table[$i] = $row['id']." ".$row['name']." ".$row['description'];
+                $table[$i] = "
+                    <tr>
+                        <td>{$row['id']}</td>
+                        <td>{$row['name']}</td>
+                        <td>{$row['description']}</td>
+                    </tr> ";
             }
             return $table;
         }
