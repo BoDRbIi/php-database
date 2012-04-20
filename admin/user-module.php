@@ -53,6 +53,7 @@ class Group extends Database
         if ($query)
             return true;
 
+            
         else
             return false;
     }
