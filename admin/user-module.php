@@ -22,7 +22,6 @@ class Database
 
     protected  function __construct()
     {
-        echo "test";
         mysql_connect($this->dbHost, $this->dbUser, $this->dbPassword) or die ('Error connecting to mysql');
         mysql_select_db($this->dbName) or die ('Can\'t select db');
     }
@@ -121,7 +120,7 @@ class Group extends Database
 
 }
 
-$obj = new Group();
-$obj ->getAllGroups();
+//$obj = new Group();
+//$obj ->getAllGroups();
 
 ?>
