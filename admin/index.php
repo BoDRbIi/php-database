@@ -23,7 +23,8 @@
     <div class="menu">
         <ul>
             <li><a href="../index.php">Main page</a></li>
-            <li><a href="users.php">List of users</a></li>
+            <li><a href="users.php">Users</a></li>
+            <li><a href="groups.php">Groups</a></li>
         </ul>
     </div>
 

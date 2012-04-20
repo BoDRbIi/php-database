@@ -109,9 +109,13 @@ class Group extends Database
         $query = mysql_query("SELECT * FROM $this->tableName");
         if ($query)
         {
-            $arrayAll = mysql_fetch_array($query);
-            print_r($arrayAll);
-            return $arrayAll;
+
+            while ($row = mysql_fetch_array($query))
+            {
+                $i = $row['id'];
+                $table[$i] = $row['id']." ".$row['name']." ".$row['description'];
+            }
+            return $table;
         }
 
         else

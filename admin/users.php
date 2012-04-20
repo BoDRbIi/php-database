@@ -22,34 +22,14 @@
     <div class="menu">
         <ul>
             <li><a href="../index.php">Main page</a></li>
-            <li><a href="users2.php">List of users</a></li>
+            <li><a href="users.php">List of users</a></li>
         </ul>
     </div>
 
     <!-- other content -->
     <div id="content">
        <?php
-            $sql = mysql_query('SELECT * FROM users');
-            if(!$sql)
-                exit('Error');
-            else
-            {
-                echo "<table border=\"1\" style=\"text-align:center\">";
-                $xid=1;
-                while(list($id, $login, $name, $surname, $pass ,$mail, $idgroup) = mysql_fetch_row($sql))
-                {
-                    echo "<tr>
-    				    <td>$id</td>
-	    				<td>$login</td>
-		    			<td>$name</td>
-			    		<td>$surname</td>
-			    		<td>$mail</td>
-			    		<td>$idgroup</td>
-				    	</tr>";
-                    $xid++;
-                }
-                echo "</table>";
-            }
+
         ?>
 
     </div>
